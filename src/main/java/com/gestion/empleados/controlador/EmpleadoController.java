@@ -4,6 +4,8 @@ package com.gestion.empleados.controlador;
 import com.gestion.empleados.entidades.Empleado;
 import com.gestion.empleados.servicios.EmpleadoService;
 import com.gestion.empleados.util.paginacion.PageRender;
+import com.gestion.empleados.util.reportes.EmpleadoExporterPDF;
+import com.lowagie.text.DocumentException;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -111,7 +113,7 @@ public class EmpleadoController {
 		return "redirect:/listar";
 	}
 	
-	/*@GetMapping("/exportarPDF")
+	@GetMapping("/exportarPDF")
 	public void exportarListadoDeEmpleadosEnPDF(HttpServletResponse response) throws DocumentException, IOException {
 		response.setContentType("application/pdf");
 		
@@ -127,7 +129,8 @@ public class EmpleadoController {
 		
 		EmpleadoExporterPDF exporter = new EmpleadoExporterPDF(empleados);
 		exporter.exportar(response);
-	}*/
+	}
+        
 	
 	/*@GetMapping("/exportarExcel")
 	public void exportarListadoDeEmpleadosEnExcel(HttpServletResponse response) throws DocumentException, IOException {

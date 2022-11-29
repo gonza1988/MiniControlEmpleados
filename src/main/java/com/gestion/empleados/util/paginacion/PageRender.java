@@ -18,7 +18,7 @@ public class PageRender<T> {
         this.page = page;
         this.paginas = new ArrayList<PageItem>();
 
-        numElementosPorPagina = 5;
+        numElementosPorPagina = 4;
         totalPaginas = page.getTotalPages();
         paginaActual = page.getNumber() + 1;
 
