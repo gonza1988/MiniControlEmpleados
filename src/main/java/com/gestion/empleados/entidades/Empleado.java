@@ -31,8 +31,8 @@ public class Empleado {
     @Email
     private String email;
 
-    @NotNull
-    private int telefono;
+    @NotEmpty
+    private String telefono;
 
     @NotEmpty
     private String sexo;
@@ -81,11 +81,11 @@ public class Empleado {
         this.email = email;
     }
 
-    public int getTelefono() {
+    public String getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(int telefono) {
+    public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
 
