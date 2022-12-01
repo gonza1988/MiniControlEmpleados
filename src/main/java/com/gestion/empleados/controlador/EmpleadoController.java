@@ -49,7 +49,7 @@ public class EmpleadoController {
 		return "ver";
 	}
 	
-	@GetMapping({"/","/listar",""})
+	@GetMapping({"/listar"})
 	public String listarEmpleados(@RequestParam(name = "page",defaultValue = "0") int page,Model modelo) {
 		Pageable pageRequest = PageRequest.of(page, 4);
 		Page<Empleado> empleados = empleadoService.findAll(pageRequest);
